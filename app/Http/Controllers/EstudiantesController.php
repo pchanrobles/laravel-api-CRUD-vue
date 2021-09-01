@@ -45,11 +45,15 @@ class EstudiantesController extends Controller
             return ['error'=> 'estudiante no encontrado'];
 
         }
-        Estudiante::update();
+
+        //return ['datos'=>$estudiante];
+
 
         return ['datos'=>$estudiante];
 
+
     }
+
 
     public function update($id, Request $request){
         //validar datos
@@ -70,7 +74,7 @@ class EstudiantesController extends Controller
             return ['error'=> 'estudiante no encontrado'];
 
         }
-// actualizar datos
+        // actualizar datos
         $actualizar->update($datos_validados);
 
         return ['mensaje'=>'Estudiante Actializado'];
